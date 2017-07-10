@@ -22,8 +22,10 @@ func NewClient(APIToken string) *Client {
 }
 
 type Client struct {
-	APIToken string
-	BaseURL  string
+	APIToken  string
+	AppID     string
+	AppSecret string
+	BaseURL   string
 }
 
 func (c *Client) Execute(ep endpoints.Request) endpoints.Response {
